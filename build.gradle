@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+}
+
+dependencies {
+  compile 'org.rocksdb:rocksdbjni:5.1.2'
+}
+
+mainClassName="io.github.volyx.Main"
